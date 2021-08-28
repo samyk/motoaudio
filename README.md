@@ -675,3 +675,171 @@ java.util.Map
 java.util.Set
 java.util.concurrent.Callable
 ```
+
+If we inspect the hex output of the resources.arsc, we see a bunch of languages and binary data -- if we remove most of the other portions of non-English, then try to extract human readable strings and ignoring resource file names, let's see what we get:
+```
+perl -nle 'print $1 while s/([ \x20-\x7e]{5,})//' out2/_out2-moto.elf.extracted/english2.arsc | grep -v res/ | sort | uniq
+  equalizer_title_brilliant_treble
+!!Verifying current audio output...
+""equalizer_motion3_brilliant_treble
+$$Verifying Audio MOD compatibility...
+% 3d dB
+%1$d / %2$d
+%1$s, %2$s
+%1$s, %2$s, %3$s
++10 db
+-10 db
+. This effect delivers a dramatic bass boost while minimizing distortion.
+//Application is not compatible with this device.
+11This mode simulates the effect of a live concert.
+11android.support.design.widget.BottomSheetBehavior
+3D Stereo
+3D stereo
+99This mode is optimized to create a surround sound effect.
+<>You can
+@@android.support.design.widget.AppBarLayout$ScrollingViewBehavior
+Adjust audio settings
+Afspil pr
+Ambient
+Audio Effects
+Audio effects
+Audio effects improves your listening experience with profiles that are tuned by audio experts to make the most out of your phone
+Balanced
+Bass Punch
+Bass punch
+Boosts the audio spectrum in the vocal range to increase the clarity of vocals and intelligibility of speech. Recommended for enhancing vocal melodies in music and dialogue in videos or movies.
+Brilliant Treble
+Brilliant diskant
+Brilliant treble
+Choose an app
+Clear query
+Collapse
+Custom
+Disabled
+Effects Profile
+Equalizer
+Extreme Bass
+Extreme bass
+FGDu kan ikke bruge denne funktion med en Moto Mod h
+Got it
+Hjemmebiograf
+Home Theater
+Home theater
+JJDynamic bass boost to improve articulation of bass and rhythm instruments.
+JJM2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z
+Live Stage
+Live stage
+M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z
+M3.27,4.27 L19.74,20.74
+More options
+Multiple Bluetooth devices
+NNM2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z
+Navigate home
+Navigate up
+Pause
+Play Sample Audio
+Processing analytics data...
+Ryd foresp
+STDynamisk basfremh
+Search
+Search query
+See all
+Share with
+Share with %s
+Speaker
+Submit query
+Surround
+Theater
+Toggle password visibility
+Treble
+Turn on Audio effects to boost the audio. Enjoy an optimal audio experience with profiles tuned by audio experts to gain the most out of your phone audio capabilities.
+Vocalizer
+Voice search
+Wired
+Wired Stereo
+Wireless Sound System
+YYM4,80c13.5,0,35.5,0,65.5,0c27.5,0,44.5,0,67.5,0c22.5,0,40.5,0,67.5,0c22.5,0,50.5,0,62.5,0
+__Immersive and spatial sound experience. This mode will provide a wider and richer audio effect.
+`dMaximum low-end
+bbM4,40c20,0,41.4,3.5,65.5,20c24.9,17,40.5,40,67.5,40c23.5,0,43-24.2,67.5-40c24-15.5,49-19.4,62.5-20
+eeM4,40c16-11.4,42.2-26.8,65.5-20c25.1,7.4,41,48.1,67.5,60c24.5,11,50-7,67.5-20c22.3-16.6,44-26,62.5-20
+effect_profile0
+effect_profile0_stereo
+effect_profile0_to_line
+effect_profile0_to_line_reverse
+effect_profile1
+effect_profile1_theater
+effect_profile1_to_line
+effect_profile1_to_line_reverse
+effect_profile2
+effect_profile2_live
+effect_profile2_to_line
+effect_profile2_to_line_reverse
+effect_profile3
+effect_profile_desc0
+effect_profile_desc1
+effect_profile_desc2
+effect_profile_desc3
+effect_profile_title0
+effect_profile_title1
+effect_profile_title2
+effect_profile_title3
+equalizer_desc_balanced
+equalizer_desc_bass_punch
+equalizer_desc_brilliant_treble
+equalizer_desc_extreme_bass
+equalizer_desc_off
+equalizer_desc_vocaliser
+equalizer_gray0
+equalizer_gray1
+equalizer_gray2
+equalizer_gray3
+equalizer_gray4
+equalizer_gray5_off
+equalizer_mono0
+equalizer_mono1
+equalizer_mono2
+equalizer_mono3
+equalizer_mono4
+equalizer_mono5_off
+equalizer_motion0_extreme_bass
+equalizer_motion1_bass_punch
+equalizer_motion2_balance
+equalizer_motion4_vocaliser
+equalizer_motion5_off
+equalizer_title_balanced
+equalizer_title_bass_punch
+equalizer_title_extreme_bass
+equalizer_title_off
+equalizer_title_vocaliser
+geforesp
+ggM4,60c11.7-9.2,36.3-29.7,66-20c26.8,8.7,36.3,53.3,67,60c27.5,6,45.5-6.4,68-20c24.1-14.6,38.3-25.7,62-20
+ggM4,80c14.8,1.1,35.9,2.9,65.5,0c23.1-2.3,42-8,67.5-20c21.1-10,42-20.1,67.5-20c32.5,0.1,52.8,12.5,62.5,20
+hhM4,20c13.7,0,38.2-0.8,65.5,0c27.7,0.8,44.4,21.6,67.5,40c22,17.5,40.8,19.5,67.5,20c26.3,0.5,52.4,0,62.5,0
+ic_bluetooth_vector
+ic_headset_vector
+ic_mod_vector
+ic_phonespeaker_vector
+ic_wss_vector
+jjM4,80c12,1.2,48.2,1.5,65.5,0c14.7-1.3,44.3-4.7,67.5-10c21.8-5,47.4-15.4,67.5-25c20.6-9.8,42.8-22.3,62.3-25
+jttaler tilsluttet.
+ppM4,40c16-11.4,42.2-26.8,65.5-20c25.1,7.4,39,60.8,67.5,60c18.5-0.5,47.3-13.1,67.5-20 c31.6-10.7,46.4-15.8,62.5-20
+rgsel
+rgslen
+s speakers. This feature isn
+san-serif
+sans-serif
+sans-serif-light
+sans-serif-medium
+t compatible with Moto Mod speakers.
+t use this feature with a Moto Mod speaker attached.
+tab_title_custom
+tab_title_live
+tab_title_stero
+tab_title_theater
+thump
+velyd
+vning for at forbedre artikuleringen af bas og rytmeinstrumenter.
+xxBoosts the audio signal in the treble frequency range. Recommended for increasing clarity in muddy or muffled acoustics.
+xxProvides a natural spectral balance between high and low frequencies. Improves overall audio fidelity in mobile devices.
+```
