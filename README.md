@@ -491,7 +491,7 @@ resources.arsc
 ```
 
 Let's take a gander at some of the images:
-![apk/drawable/connected_device_bluetooth.png]![apk/drawable/connected_device_mba.png]![apk/drawable/connected_device_mod.png]![apk/drawable/connected_device_speaker.png]![apk/drawable/connected_device_wired.png]![apk/drawable/disable_audiofx.png]![apk/drawable/disable_audiofx_land.png]![apk/drawable/effect_bg.png]![apk/drawable/effect_bg_small.png]![apk/drawable/ic_audio_effect.png]![apk/drawable/ic_equalizer.png]![apk/drawable/ic_equalizer_off.png]![apk/drawable/ic_launcher.png]
+![apk/drawable/connected_device_bluetooth.png](apk/drawable/connected_device_bluetooth.png)![apk/drawable/connected_device_mba.png](apk/drawable/connected_device_mba.png)![apk/drawable/connected_device_mod.png](apk/drawable/connected_device_mod.png)![apk/drawable/connected_device_speaker.png](apk/drawable/connected_device_speaker.png)![apk/drawable/connected_device_wired.png](apk/drawable/connected_device_wired.png)![apk/drawable/disable_audiofx.png](apk/drawable/disable_audiofx.png)![apk/drawable/disable_audiofx_land.png](apk/drawable/disable_audiofx_land.png)![apk/drawable/effect_bg.png](apk/drawable/effect_bg.png)![apk/drawable/effect_bg_small.png](apk/drawable/effect_bg_small.png)![apk/drawable/ic_audio_effect.png](apk/drawable/ic_audio_effect.png)![apk/drawable/ic_equalizer.png](apk/drawable/ic_equalizer.png)![apk/drawable/ic_equalizer_off.png](apk/drawable/ic_equalizer_off.png)![apk/drawable/ic_launcher.png](apk/drawable/ic_launcher.png)
 
 Android binaries are generally packed in the dex files so let's unpack via dex2jar
 ```sh
